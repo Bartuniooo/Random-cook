@@ -1,4 +1,4 @@
-# 🍽️ Random Cook
+![Logo aplikacji Random Cook](images/Random_cook_logo_long.png)
 
 **Random Cook** to prosta, ale praktyczna aplikacja napisana w Pythonie, która rozwiązuje jeden z największych codziennych problemów:  
 👉 *„Co dziś zjeść?”*
