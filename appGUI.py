@@ -19,7 +19,7 @@ def createMainWindow():
 
     app = ctk.CTk()
     app.title("Random cook - ")
-    app.iconbitmap('images/chef.ico')
+    app.iconbitmap('images/Random_cook_logo.ico')
     app.geometry("900x600")
     app.resizable(False, False)
     width = 900
