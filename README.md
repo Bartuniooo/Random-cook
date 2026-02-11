@@ -1,49 +1,61 @@
-![Logo aplikacji Random Cook](images/Random_cook_logo_long.png)
+![Random Cook Application Logo](images/Random_cook_logo_long.png)
 
-**Random Cook** to prosta, ale praktyczna aplikacja napisana w Pythonie, która rozwiązuje jeden z największych codziennych problemów:  
-👉 *„Co dziś zjeść?”*
+# 🍽 Random Cook
 
-Aplikacja losuje posiłki z Twojej własnej bazy ulubionych dań, planując jadłospis od **1 dnia do całego tygodnia**, **bez powtórzeń**. Zero myślenia, zero stresu – pełny porządek przez losowość w kuchni 😄
+Random Cook is a desktop application built in Python that helps users automatically generate meal plans based on their personal database of favorite dishes.
+It ask a basic daily question: <br>
+👉 _„What I eat today ?”_
 
----
+The application eliminates repetitive decision-making by generating structured meal plans for 1 to 7 days without repeating meals.
 
-## 🚀 Funkcjonalności
-
-- 🎲 **Losowanie posiłków** z bazy danych MongoDB
-- 📅 **Planowanie od 1 do 7 dni**
-- 🔁 **Brak powtórzeń** w wygenerowanym planie, bo po co jeść to samo kilka dni pod rząd
-- ⚖️ **Możliwość wyboru od 3 - 5 posiłków na dzień**
-- 🧠 **Decyzje bez wysiłku** – aplikacja myśli za Ciebie
-- 🗂️ **Własna baza ulubionych posiłków**
+This project demonstrates database integration, algorithmic logic, and GUI development.
 
 ---
 
-## 🧩 Jak to działa?
+## 🚀 Features
 
-1. Dodajesz swoje ulubione posiłki do bazy danych
-2. Wybierasz, na ile dni chcesz zaplanować jedzenie  
-3. Wybierasz ile posiłków dziennie i czy desery lub przekąska
-4. Aplikacja losuje:
-   - posiłki
-   - ilości
-   - bez powtórzeń  
-5. Otrzymujesz gotowy plan posiłków do pobrania w PDF 🎉
-
----
-
-## 🛠️ Stack technologiczny
-
-- **Backend**: Python
-- **Baza danych**: MongoDB
-- **Layout**: customtkinter + tkinter
-- python random
-- pymongo
+- Randomized meal selection from a MongoDB database
+- Meal planning from 1 to 7 days
+- No repeated meals within a generated plan
+- Configurable number of meals per day (3–5)
+- Optional inclusion of snacks and desserts
+- PDF export of the generated meal plan
+- User-defined meal database
 
 ---
 
-## 📦 Instalacja i uruchomienie
+## 🧩 How It Works
+
+1. The user stores meals in a MongoDB database.
+2. The user selects:
+   - number of days (1–7),
+   - number of meals per day,
+   - optional categories (e.g., snacks or desserts).
+3. The application generates a randomized meal plan.
+4. Meals are selected without repetition.
+5. The final plan is exported as a PDF file.
+
+The application separates business logic (meal generation algorithm) from the GUI layer to maintain clarity and maintainability.
+
+---
+
+## 🛠 Tech Stack
+
+- Python
+- MongoDB
+- pymongo (database communication)
+- random module (selection logic)
+- tkinter
+- customtkinter (modern UI styling)
+- PDF generation library
+
+---
+
+## 📦 Installation & Running
 
 ```bash
-git clone https://github.com/twoj-login/random-cook.git
+git clone https://github.com/your-username/random-cook.git
 cd random-cook
+pip install -r requirements.txt
 python main.py
+```
