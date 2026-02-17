@@ -1,6 +1,6 @@
 ![Random Cook Application Logo](images/Random_cook_logo_long.png)
 
-# 🍽 Random Cook
+# Random Cook
 
 Random Cook is a desktop application built in Python that helps users automatically generate meal plans based on their personal database of favorite dishes.
 It ask a basic daily question: <br>
@@ -48,6 +48,15 @@ The application separates business logic (meal generation algorithm) from the GU
 - tkinter
 - customtkinter (modern UI styling)
 - PDF generation library
+
+---
+
+# 🧠 What I learned
+This project explores my algorithmic thinking through the design and implementation of the core meal selection algorithm architecture.
+
+It was developed as part of a college MongoDB course and helped me gain practical experience working with MongoDB, including database design and integration using PyMongo.
+
+Additionally, I learned how to handle and process PDF files in Python.
 
 ---
 
