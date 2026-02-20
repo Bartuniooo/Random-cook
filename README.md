@@ -12,6 +12,12 @@ This project demonstrates database integration, algorithmic logic, and GUI devel
 
 ---
 
+<img src="images/main_app_page.png" height="450">
+
+
+
+---
+
 ## 🚀 Features
 
 - Randomized meal selection from a MongoDB database
@@ -52,6 +58,7 @@ The application separates business logic (meal generation algorithm) from the GU
 ---
 
 # 🧠 What I learned
+
 This project explores my algorithmic thinking through the design and implementation of the core meal selection algorithm architecture.
 
 It was developed as part of a college MongoDB course and helped me gain practical experience working with MongoDB, including database design and integration using PyMongo.
