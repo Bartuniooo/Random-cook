@@ -71,6 +71,8 @@ Additionally, I learned how to handle and process PDF files in Python.
 
 video
 
+---
+
 ## 📦 Installation & Running
 
 ```bash
