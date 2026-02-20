@@ -65,6 +65,5 @@ Additionally, I learned how to handle and process PDF files in Python.
 ```bash
 git clone https://github.com/your-username/random-cook.git
 cd random-cook
-pip install -r requirements.txt
 python main.py
 ```

@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-import customtkinter as ctk
+import customtkinter as ctk # type: ignore
 from pymongo import MongoClient
 from PIL import Image
 import re

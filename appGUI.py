@@ -2,10 +2,10 @@ from tkinter import messagebox
 import customtkinter as ctk
 import tkinter as tk
 from classes import *
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
+# from reportlab.lib.pagesizes import letter
+# from reportlab.pdfgen import canvas
+# from reportlab.pdfbase import pdfmetrics
+# from reportlab.pdfbase.ttfonts import TTFont
 from textwrap import wrap
 import random
 import os
