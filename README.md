@@ -67,7 +67,7 @@ Additionally, I learned how to handle and process PDF files in Python.
 
 ---
 
-## Demo
+## ⏩ Demo
 
 video
 
