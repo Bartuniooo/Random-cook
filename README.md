@@ -12,9 +12,9 @@ This project demonstrates database integration, algorithmic logic, and GUI devel
 
 ---
 
-<img src="images/main_app_page.png" height="450">
-
-
+<p align="center">
+  <img src="images/main_app_page.png" height="400">
+</p>
 
 ---
 
