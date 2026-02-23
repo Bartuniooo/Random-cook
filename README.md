@@ -76,7 +76,7 @@ video
 ## 📦 Installation & Running
 
 ```bash
-git clone https://github.com/your-username/random-cook.git
+git clone https://github.com/Bartuniooo/Random-cook.git
 cd random-cook
 python main.py
 ```
