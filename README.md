@@ -57,7 +57,7 @@ The application separates business logic (meal generation algorithm) from the GU
 
 ---
 
-# 🧠 What I learned
+## 🧠 What I learned
 
 This project explores my algorithmic thinking through the design and implementation of the core meal selection algorithm architecture.
 
