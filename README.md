@@ -12,15 +12,9 @@ This project demonstrates database integration, algorithmic logic, and GUI devel
 
 ---
 
-<p align="center">
-  <img src="images/main_app_page.png" height="400">
-</p>
-
----
-
 ## 🚀 Features
 
-- Randomized meal selection from a MongoDB database
+- Randomized meal selection from a MongoDB databasev
 - Meal planning from 1 to 7 days
 - No repeated meals within a generated plan
 - Configurable number of meals per day (3–5)
@@ -69,7 +63,10 @@ Additionally, I learned how to handle and process PDF files in Python.
 
 ## ⏩ Demo
 
-video
+<p align="center">
+  <img src="images/main_app_page.png" height="400">
+  <img src="images/add-recipe-page.png" height="400">
+</p>
 
 ---
 

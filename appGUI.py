@@ -16,7 +16,6 @@ def createMainWindow():
     ctk.set_default_color_theme("green")
     ctk.deactivate_automatic_dpi_awareness()
 
-
     app = ctk.CTk()
     app.title("Random cook - ")
     app.iconbitmap('images/Random_cook_logo.ico')
@@ -30,16 +29,15 @@ def createMainWindow():
     position_left = int(screen_width / 2 - width / 2)
     app.geometry(f"{width}x{height}+{position_left}+{position_top}")
 
-
     numbers = ["1","2","3","4","5","6","7"]
     textForPDF = ""
 
     numbersOfDays = tk.StringVar()
     isVege = tk.BooleanVar()
     czyPrzekaski = tk.BooleanVar()
-
-
-                            # -------------- COMPONENTS -----------------
+    
+    
+    # ---------------------------- COMPONENTS -------------------------------
     downloadImage = ctk.CTkImage(light_image=Image.open("images/downloadButton.png"), size=(25, 25))
 
     shaffleButton = ctk.CTkButton(app, text="Losuj dania", command=lambda: shuffleMealPlan(app, mainFrame, naIleDniCombobox,czyWegeCheckbox, czyPrzekaskiChecbox, czyDeseryCheckbox, downloadImage, textForPDF), corner_radius=50, fg_color='green', hover_color='#49cc49')
@@ -81,10 +79,11 @@ def createMainWindow():
     app.mainloop()
 
 
-# ---------------- OPENERY -----------------------------
+# ------------------------------ OPENERY -----------------------------
 
 def openAddRecipeWindow(app):
     newWindow = AddRecipeWindow(app)
+
 
 
 def openUpdateRecipeWindow(app):
@@ -92,13 +91,14 @@ def openUpdateRecipeWindow(app):
 
 
 
-# ---------------- RESZTA ------------------------------
+# ------------------------------ RESZTA ------------------------------
 
 def clearMainFrame(app, mainFrame):
-    # funkcja do usuwania zawartości mainFrame jeśli była
+    # Funkcja do usuwania zawartości mainFrame jeśli była
     if mainFrame.winfo_children():
         for widget in mainFrame.winfo_children():
             widget.destroy()
+
 
 
 def saveRecipeToPDF(textForPDF):
@@ -152,12 +152,12 @@ def saveRecipeToPDF(textForPDF):
                 c.showPage()  
                 c.setFont("DejaVuSans", 12)  
                 y = 750  # Resetujemy pozycję Y na nowej stronie
-    
     c.save()
 
 
+
 def extractIngredientsPretty(tekst):
-    # funkcja do ładnego przedstawienia składników w frame w oknie głównym
+    # Funkcja do ładnego przedstawienia składników w frame w oknie głównym
     składniki = ""
     
     for i in range(len(tekst[0]["ingredients"])):
@@ -179,7 +179,7 @@ def extractIngredientsPretty(tekst):
 
 
 def checkIDLists(ListAllID, iloscDniDiety, isVege, mealType):
-    # funkcja sprawdzająca czy jest odpowiednia ilość przepisów dla warunku isVege
+    # Funkcja sprawdzająca czy jest odpowiednia ilość przepisów dla warunku isVege
     wylosowaneID = []
 
     if len(ListAllID) == 0:
@@ -208,9 +208,10 @@ def checkIDLists(ListAllID, iloscDniDiety, isVege, mealType):
 
     return wylosowaneID
    
+   
 
 def shuffleMealPlan(app, mainFrame, naIleDniCombobox, czyWegeCheckbox, czyPrzekaskiChecbox, czyDeseryCheckbox, downloadImage, textForPDF):
-    # funcja losująca na każdy wybrany dzień posiłki według kategorii
+    # Funcja losująca na każdy wybrany dzień posiłki według kategorii
     iloscDniDiety = naIleDniCombobox.get()
     czyWege = bool(czyWegeCheckbox.get())
     czyPrzekaski = bool(czyPrzekaskiChecbox.get())
@@ -219,6 +220,7 @@ def shuffleMealPlan(app, mainFrame, naIleDniCombobox, czyWegeCheckbox, czyPrzeka
 
     if iloscDniDiety == "":
         messagebox.showerror("Error", "Należy podać na ile dni rozpisać diete")
+
     else:
         clearMainFrame(app, mainFrame)
 
@@ -267,6 +269,7 @@ def shuffleMealPlan(app, mainFrame, naIleDniCombobox, czyWegeCheckbox, czyPrzeka
             if czyWege == True:
                 AllPrzekaskiID = [x.get("_id") for x in db.przekąski.find({"isVege": bool(True)},{"_id":1}).sort({"_id":1})]
                 wylosowanePrzekaskiID = checkIDLists(AllPrzekaskiID, int(iloscDniDiety), True, "przekąski")
+
             else:
                 AllPrzekaskiID = [x.get("_id") for x in db.przekąski.find({"isVege": bool(False)},{"_id":1}).sort({"_id":1})]
                 wylosowanePrzekaskiID = checkIDLists(AllPrzekaskiID, int(iloscDniDiety), False, "przekąski")
@@ -279,11 +282,11 @@ def shuffleMealPlan(app, mainFrame, naIleDniCombobox, czyWegeCheckbox, czyPrzeka
 
                 wylosowanePrzekaski.append(przepis)
             
-
         if czyDesery == True:
             if czyWege == True:
                 AllDeseryID = [x.get("_id") for x in db.desery.find({"isVege": bool(True)},{"_id":1}).sort({"_id":1})]
                 wylosowaneDeseryID = checkIDLists(AllDeseryID, int(iloscDniDiety), True, "desery")
+
             else:
                 AllDeseryID = [x.get("_id") for x in db.desery.find({"isVege": bool(False)},{"_id":1}).sort({"_id":1})]
                 wylosowaneDeseryID = checkIDLists(AllDeseryID, int(iloscDniDiety), False, "desery")
@@ -301,7 +304,6 @@ def shuffleMealPlan(app, mainFrame, naIleDniCombobox, czyWegeCheckbox, czyPrzeka
             # tworzenie słownika który zawiera nazwe jako klucz i liste jako wartość
         for i in range(int(iloscDniDiety)):
             frameTextDict[f'frameText{i+1}'] = [] 
-
 
             # pętla do wpisywania danych do list słowników
         for i in range(int(iloscDniDiety)):
